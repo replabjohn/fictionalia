@@ -9,6 +9,7 @@ def do_subs(text):
         "Sevorbeupstry",
         "Sevorsbeupstry",
         "Preliumtarn",
+        "Golgafrincham",
         "Alpha Centauri",
         "Codfish Island",
         ]
@@ -27,6 +28,7 @@ def do_subs(text):
         "Prostetnic Vogon Jeltz",
         "Dirk Gently",
         "Jeltz",
+        "Slartibartfast",
         "Mr. Prosser",
         "Arthur",
         "Ford",

@@ -16,7 +16,7 @@ The exceptions are:
 	data\film-tv\Westworld_quotes.json (quotes from the TV show Westworld)
 	data\words\us_president_quotes.json (quotes from US presidents)
 
-- 'pqf2.txt', which is a heavily-edited version of the The Pratchett Quote File v6.0.
+- 'pqf2.txt', which is a heavily-edited version of the Pratchett Quote File v6.0.
 	Original is available from https://www.lspace.org/books/pqf/index.html.
 
 - 'da_quotes.txt', which is an edited list of quotes from Douglas Adams.

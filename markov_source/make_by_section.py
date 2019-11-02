@@ -1025,6 +1025,7 @@ def modify_section(text, file):
                     "Pinewood",
                     "Vauxhall",
                     "Elephant and Castle",
+                    "Poundbury",
                     #"",
                     #"",
 
@@ -2139,7 +2140,8 @@ def modify_section(text, file):
               "Lagan", "Ouse", "Avon", "Severn", "Arun", "Fleet", "Welland",
               "Tyne", "Ouseburn", "Deptford Creek", "Clyde", "Forth",
               "Tweed", "Esk", "Ribble", "Humber", "Medway", "Brent",
-              "Nadder", "Wye", "Wharfe", "Tavy", "Lea", "Dee", "Colne"]
+              "Nadder", "Wye", "Wharfe", "Tavy", "Lea", "Dee", "Colne",
+              "Taw"]
 
     for subj in property_subjects:
         subj = u"%s" % subj
