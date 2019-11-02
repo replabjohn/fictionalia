@@ -501,6 +501,19 @@ def make_name(VERBOSE=0, LOG=0):
     if LOG == 1:
         logfile.write("NAME: '%s'\n" % name)
 
+    #fix known oddnesses...
+    if string.find(name, "leing") > -1:
+        name = string.replace(name, "leing", "ling")
+    if string.find(name, "iea") > -1:
+        name = string.replace(name, "iea", "ea")
+    if string.find(name, "ein") > -1:
+        name = string.replace(name, "ein", random.choice(("en","in")))
+    if string.find(name, "shit") > -1:
+        #would rather avoid having the word 'shit' in a place name!
+        name = string.replace(name, "shit", "shot")
+
+
+
     name2 = name
     if len(name) < 6:
         use_modifer= 1
