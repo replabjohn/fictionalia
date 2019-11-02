@@ -1026,6 +1026,11 @@ def modify_section(text, file):
                     "Vauxhall",
                     "Elephant and Castle",
                     "Poundbury",
+                    "Kimmeridge",
+                    "Walton-on-the-Naze, Essex",
+                    "Walton-on-the-Naze",
+                    "Walton",
+                    "Frinton",
                     #"",
                     #"",
 
@@ -1880,6 +1885,8 @@ def modify_section(text, file):
                   "Gillian Brydson",
                   "Sarah Denne",
                   "Peter Fox",
+                  "Anna de Pass",
+                  "Thea Roper",
 
                   #Special cases
                   #Journalists
@@ -2130,6 +2137,7 @@ def modify_section(text, file):
                          ["2015_07_03.txt", ["Dorchester, Dorset", "Dorchester"]],
                          ["2019_10_18.txt", ["Dumfries, Dumfries & Galloway", "Dumfries"]],
                          ["2019_10_26.txt", ["Tavistock, Devon", "Tavistock"]],
+                         ["2019_11_02.txt", ["Walton-on-the-Naze, Essex", "Walton-on-the-Naze"]],
                          #["", ["", ""]],
                          #["", ["", ""]],
                          ]
