@@ -399,12 +399,105 @@ def blurb_type_4(blurb, quotechar='"', county=None, author=None, towns=None, boo
         return "%s\n%s" % (blurb, newblurb)
 
 
+def blurb_type_5A(blurb, quotechar='"', county=None, author=None, towns=None, bookname=None):
+    """Blurbs in the style 'The greatest work of literature since [NOBEL PRIZE WINNER]'s [FAMOUS BOOK].' """
+
+    #selected winners of the Nobel Prize in Literature
+    litwinners = [
+        #Kazuo Ishiguro - winner of The Nobel Prize in Literature 2017
+        """Kazuo Ishiguro's "Never Let Me Go" """,
+        """Kazuo Ishiguro's "Remains of the Day" """,
+        #Alice Munro - winner of The Nobel Prize in Literature 2013
+        """Alice Munro's "Selected Stories" """,
+        """Alice Munro's "The Beggar Maid" """,
+        #Mario Vargas Llosa - winner of The Nobel Prize in Literature 2010
+        """Mario Vargas Llosa's "The Feast of the Goat" """,
+        """Mario Vargas Llosa's "The Bad Girl" """,
+        """Mario Vargas Llosa's "The Time of the Hero" """,
+        #Doris Lessing - winner of The Nobel Prize in Literature 2007
+        """Doris Lessing's "The Grass is Singing" """,
+        """Doris Lessing's "The Golden Notebook" """,
+        """Doris Lessing's "The Good Terrorist" """,
+        #Orhan Pamuk - winner of The Nobel Prize in Literature 2006
+        """Orhan Pamuk's "My Name is Red" """,
+        """Orhan Pamuk's "Snow" """,
+        """Orhan Pamuk's "The White Castle" """,
+        #Harold Pinter - winner of The Nobel Prize in Literature 2005
+        """Harold Pinter's "The Birthday Party" """,
+        """Harold Pinter's "The Homecoming" """,
+        """Harold Pinter's "The Dumb Waiter" """,
+        #John M. Coetzee - winner of The Nobel Prize in Literature 2003
+        """John M. Coetzee's "Waiting for the Barbarians" """,
+        """John M. Coetzee's "Summertime" """,
+        #Günter Grass - winner of The Nobel Prize in Literature 1999
+        """Günter Grass's "The Tin Drum" """,
+        """Günter Grass's "Crabwalk" """,
+        """Günter Grass's "Peeling the Onion" """,
+        #Dario Fo - winner of The Nobel Prize in Literature 1997
+        """Dario Fo's "Accidental Death of an Anarchist" """,
+        """Dario Fo's "Can't Pay? Won't Pay!" """,
+        #Seamus Heaney - winner of The Nobel Prize in Literature 1995
+        """Seamus Heaney's "North" """,
+        """Seamus Heaney's "The Spirit Level" """,
+        #Toni Morrison - winner of The Nobel Prize in Literature 1993
+        """Toni Morrison's "Beloved" """,
+        """Toni Morrison's "Tar Baby" """,
+        """Toni Morrison's "The Bluest Eye" """,
+        #William Golding - winner of The Nobel Prize in Literature 1983
+        """William Golding's "Lord of the Flies" """,
+        """William Golding's "Rites of Passage" """,
+        """William Golding's "Pincher Martin" """,
+        """William Golding's "The Inheritors" """,
+        """William Golding's "Darkness Visible" """,
+        #Gabriel García Márquez - winner of The Nobel Prize in Literature 1982
+        """Gabriel García Márquez's "One Hundred Years of Solitude" """,
+        """Gabriel García Márquez's "Love in the Time of Cholera" """,
+        #Saul Bellow - winner of The Nobel Prize in Literature 1976
+        """Saul Bellow's "The Adventures of Augie March" """,
+        """Saul Bellow's "Herzog" """,
+        """Saul Bellow's "Humboldt's Gift" """,
+        #Pablo Neruda - winner of The Nobel Prize in Literature 1971
+        """Pablo Neruda's "The Captain's Verses" """,
+        """Pablo Neruda's "Residence on Earth" """,
+        """Pablo Neruda's "The Book of Questions" """,
+        #Aleksandr Isayevich Solzhenitsyn - winner of The Nobel Prize in Literature 1970
+        """Aleksandr Solzhenitsyn's "One Day in the Life of Ivan Denisovich" """,
+        """Aleksandr Solzhenitsyn's "The Gulag Archipelago" """,
+        """Aleksandr Solzhenitsyn's "In the First Circle" """,
+        #Samuel Beckett - winner of The Nobel Prize in Literature 1969
+        """Samuel Beckett's "Murphy" """,
+        """Samuel Beckett's "Waiting for Godot" """,
+        """Samuel Beckett's "Molloy" """,
+        """Samuel Beckett's "Krapp's Last Tape" """,
+        """Samuel Beckett's "Endgame" """,
+        #Jean-Paul Sartre - winner of The Nobel Prize in Literature 1964
+        """Jean-Paul Sartre's "Nausea" """,
+        """Jean-Paul Sartre's "Being and Nothingness" """,
+        """Jean-Paul Sartre's "No Exit" """,
+        #John Steinbeck - winner of The Nobel Prize in Literature 1962
+        """John Steinbeck's "Of Mice and Men" """,
+        """John Steinbeck's "The Grapes of Wrath" """,
+        """John Steinbeck's "East of Eden" """,
+        """John Steinbeck's "Cannery Row" """,
+]
+    litwinner = string.strip(random.choice(litwinners))
+
+    newblurb = random.choice(("The greatest work of literature since %s." % litwinner,
+                              "The greatest single work of literature since %s." % litwinner,
+                              ))
+    newblurb = '%s%s%s' % (quotechar, newblurb, quotechar)
+
+    if blurb == "":
+        return newblurb
+    else:
+        return "%s\n%s" % (blurb, newblurb)
+
+
 def blurb_type_5(blurb, quotechar='"', county=None, author=None, towns=None, bookname=None):
     """Real (mainly) blurbs quoted in He Blurbed, She Blurbed
 By Rachel Donadio, New York Times, Aug. 15, 2008
 https://www.nytimes.com/2008/08/17/books/review/Donadio-t.html"""
 
-    #bookname = "" #replace later
     author_firstname = string.split(author)[0]
     if author_firstname in names.male_firstnames:
         #gender_word = "he"
@@ -420,7 +513,9 @@ https://www.nytimes.com/2008/08/17/books/review/Donadio-t.html"""
         gender_word3 = "himself"
         gender_word4 = "person"
 
-    newblurb = random.choice(("The greatest single work of literature since the Bible.",
+    newblurb = random.choice(("The greatest work of literature since the Bible.",
+                              "The greatest work of literature since the 'The Da Vinci Code.'",
+                              "The greatest single work of literature since the Bible.",
                               "The greatest single work of literature since the 'The Da Vinci Code.'",
                               "Good God! Drop everything and read this book now!",
                               "A demented, deadpan-comic wonder.",
@@ -568,7 +663,15 @@ def blurb_type_11(blurb, quotechar='"', county=None, author=None, towns=None, bo
     """Pretentious literary quote, eg: 'Forget Harold Bloom, forget John Leonard, forget V.S. Pritchett, you simply cannot forget this book!"'"""
 
     authors = ["Henry James", "Franz Kafka", "Leo Tolstoy", "Shakespeare", "Erasmus", "V.S. Pritchett",
-               "John Leonard", "Harold Bloom", "Don DeLillo", "Saul Bellow"]
+               "John Leonard", "Harold Bloom", "Don DeLillo", "Saul Bellow",
+               #Nobel Prize winners
+               "Kazuo Ishiguro", "Alice Munro", "Mario Vargas Llosa",
+               "Doris Lessing", "Orhan Pamuk", "Harold Pinter",
+               "John M. Coetzee", "Günter Grass", "Dario Fo", "Seamus Heaney",
+               "Toni Morrison", "William Golding", "Gabriel García Márquez",
+               "Saul Bellow", "Pablo Neruda", "Aleksandr Solzhenitsyn",
+               "Samuel Beckett", "Jean-Paul Sartre", "John Steinbeck"]
+
     a1 = random.choice(authors)
     authors.remove(a1)
     a2 = random.choice(authors)
@@ -1674,7 +1777,8 @@ def do_blurb(quotechar='"', county=None, author=None, towns=None, bookname=None,
                  "Type 7", "Type 8", "Type 9", "Type 10", "Type 11", "Type 12",
                  "Type 13", "Type 14", "Type 15", "Type 16", "Type 17", "Type 18",
                  "Type 90", "Type 91", "Type 92", "Type 93", "Type 94",
-                 "Type 95", "Type 96", "Type 97", "Type 98", "Type 99"]
+                 "Type 95", "Type 96", "Type 97", "Type 98", "Type 99",
+                 "Type 5A"]
 
     blurbs = ""
     b=""
@@ -1743,6 +1847,8 @@ def do_blurb(quotechar='"', county=None, author=None, towns=None, bookname=None,
             b = blurb_type_98(b, quotechar=quotechar, county=county, author=author, towns=towns, bookname=bookname)
         elif blurbtype == "Type 99":
             b = blurb_type_99(b, quotechar=quotechar, county=county, author=author, towns=towns, bookname=bookname)
+        elif blurbtype == "Type 5A":
+            b = blurb_type_5A(b, quotechar=quotechar, county=county, author=author, towns=towns, bookname=bookname)
         else:
             if DEBUG == 1:
                 print "ERROR!"
