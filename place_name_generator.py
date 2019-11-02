@@ -3,7 +3,7 @@
 
 #place_name_generator.py
 
-__VERSION__ = "0.3g"
+__VERSION__ = "0.3h"
 
 import random
 import sys, string
@@ -296,7 +296,7 @@ suffixes = ["well",             # Stockwell, Crudwell
             "mount",
             "row", # Barrow, Harrow, Heathrow
             "end", # Gravesend
-            "inge" # Lyminge, Sellindge, Beltinge, Pedlinge, Ottinge, Hawkinge, Ospringe
+            "inge",# Lyminge, Sellindge, Beltinge, Pedlinge, Ottinge, Hawkinge, Ospringe
             #(place names ending in ing,inge or ings were usually found on higher ground, or in places which control strategic points)
             "holt", # Northolt, Bergholt (Meant wood in the Saxon language)
             "hurst" # Selhurst, Staplehurst, Chislehurst (Hurst meant a wooded hill)
