@@ -1900,6 +1900,12 @@ def modify_section(text, file):
                   "Mark Reckless"#, 
                   ]
 
+    uk_countries = ["England", "Scotland", "Wales", "Northern Ireland"]
+    uk_nationalities = ["English", "Scottish", "Welsh", "Northern Irish"]
+    other_countries = ["Turkey", "Romania", "Vietnam", "Nigeria",
+                       "Greece", "Colombia", "Thailand", "Italy", "Spain"]
+    other_nationalities = ["Turkish", "Romanian", "Vietnamese", "Nigerian",
+                            "Greek", "Colombian", "Thai", "Italian", "Spanish"]
 
     #London Underground tube lines, and other light rail systems...
     known_tube_lines = [
@@ -2188,6 +2194,26 @@ def modify_section(text, file):
         rail_line = u"%s" % rail_line
         if string.find(text, rail_line) > -1:
             text = string.replace(text, rail_line, u"[RAILWAY]")
+
+    for ukc in uk_countries:
+        ukc = u"%s" % ukc
+        if string.find(text, ukc) > -1:
+            text = string.replace(text, ukc, u"[THIS_COUNTRY]")
+
+    for ukn in uk_nationalities:
+        ukn = u"%s" % ukn
+        if string.find(text, ukn) > -1:
+            text = string.replace(text, ukn, u"[THIS_NATIONALITY]")
+
+    for oc in other_countries:
+        oc = u"%s" % oc
+        if string.find(text, oc) > -1:
+            text = string.replace(text, oc, u"[OTHER_COUNTRY]")
+
+    for on in other_nationalities:
+        on = u"%s" % on
+        if string.find(text, on) > -1:
+            text = string.replace(text, on, u"[OTHER_NATIONALITY]")
 
     #have this last so it doesn't mess up any other substitutions...
     #Too many short river names.            
