@@ -1567,7 +1567,7 @@ def blurb_type_96(blurb, quotechar='"', county=None, author=None, towns=None, bo
 
     if author == None:
         author = names.getName()
-
+    tempsep = random.choice((", ", ", ", " - "))
     newblurb = random.choice(("A masterpiece of luminous writing.",
                               "A consumate example of luminous writing.",
                               "A consumate example of travel writing.",
@@ -1577,6 +1577,15 @@ def blurb_type_96(blurb, quotechar='"', county=None, author=None, towns=None, bo
                               "%s brings %s to life." % (author, county),
                               "%s really brings %s to life." % (author, county),
                               "%s truly brings %s to life." % (author, county),
+
+                              "Run%sdon't walk%sto buy this book%s" % (tempsep,
+                                                                       tempsep,
+                                                                       random.choice(("!","!","."))),
+                              "Run%sdon't walk%sto buy %s%s" % (tempsep,
+                                                                tempsep,
+                                                                bookname,
+                                                                random.choice(("!","!","."))),
+
                               ))
 
     newblurb = '%s%s%s' % (quotechar, newblurb, quotechar)
