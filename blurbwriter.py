@@ -877,7 +877,7 @@ def blurb_type_12(blurb, quotechar='"', county=None, author=None, towns=None, bo
                               "%s is a wonderful, funny and spot-on portrait of %s." % (bookword, county),
                               "In two words: A masterpiece.",
                               "Beautifully written, funny and touching.",
-                              "Punchy, hilarious and apparently even true."
+                              "Punchy, hilarious and apparently even true.",
                               "A thoughtful, skillfully drawn portrait of %s." % county,
                               "%s's page-turner ranges brilliantly from %s to %s. A must read for anyone %s in %s." % (author, t1, t2,
                                                                                                                        random.choice(("interested",
