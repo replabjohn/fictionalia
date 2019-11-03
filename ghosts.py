@@ -303,7 +303,7 @@ def make_ghost(place=None, current_year=None):
 
     grisly_fate1 = random.choice(("was killed by",
                                  "was murdered by",
-                                 "was killed in unexplained circumstances, allegedly by"
+                                 "was killed in unexplained circumstances, allegedly by",
                                  "was brutally murdered by",
                                  "was murdered while %s slept by" % person_pronoun3,
                                  "was murdered in %s sleep by" % person_pronoun,
