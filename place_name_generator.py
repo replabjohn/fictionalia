@@ -3,7 +3,7 @@
 
 #place_name_generator.py
 
-__VERSION__ = "0.3h"
+__VERSION__ = "0.3j"
 
 import random
 import sys, string
@@ -508,11 +508,11 @@ def make_name(VERBOSE=0, LOG=0):
         name = string.replace(name, "iea", "ea")
     if string.find(name, "ein") > -1:
         name = string.replace(name, "ein", random.choice(("en","in")))
+    if string.find(name, "ieo") > -1:
+        name = string.replace(name, "ieo", random.choice(("ie","eo")))
     if string.find(name, "shit") > -1:
         #would rather avoid having the word 'shit' in a place name!
         name = string.replace(name, "shit", "shot")
-
-
 
     name2 = name
     if len(name) < 6:
