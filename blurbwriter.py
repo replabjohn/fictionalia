@@ -249,10 +249,12 @@ def make_content_summary(author=None, county=None, towns=None):
                                                                             county),
                         "Can %s ferret out any fascinating secrets, or will it all be pubs, schools and property prices?" % random.choice((gender_word, author_firstname)),
 
-                        "Will %s win %s bet with %s editor that %s isn't the most boring place in the world?" % (random.choice((gender_word, author_firstname)),
-                                                                                                                 gender_word3,
-                                                                                                                 gender_word3,
-                                                                                                                 county),
+                        "Will %s win %s bet with %s editor that %s isn't the most boring place in the %s?" % (random.choice((gender_word, author_firstname)),
+                                                                                                              gender_word3,
+                                                                                                              gender_word3,
+                                                                                                              county,
+                                                                                                              random.choice(("world", "country", "UK"))
+                                                                                                              ),
 
                         "Can %s%s%s any fascinating secrets, or will %s %s bored %s by pubs, schools and property prices?" % (random.choice((gender_word, author_firstname)),
                                                                                                                       random.choice((" ", " actually ", " really ")),
