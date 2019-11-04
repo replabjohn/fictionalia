@@ -2530,21 +2530,6 @@ def make_fast_food_joint_name():
 
     return jointname
 
-
-#SPAM0
-
-#Have Randomly Generated Cocktail Names In The Pub/ Lounge Bar.
-
-#Multiple, Slippery, Screaming, Wet, LONG ISLAND, Classic, Old, Dirty, Drunken, Fearless, Liquid 
-#Tropical, Naked, Fuzzy, Fiery, Crazy, Crouching, Flaming, Flying, Super, Long, Slow, Comfortable
-
-#[COLOUR]
-#Pink, Red, Blue, White, Black
-
-#Nipple, Orgasm, Gorilla, Elf, Redneck, Zombie, Russian, Bee, Tiger, Elephant, Grasshopper
-
-#AGAINST THE WALL, ON THE BEACH, Juice
-
 def make_random_cocktail_name(mode=None):
     #Have Randomly Generated Cocktail Names In The Pub/ Lounge Bar.
     if mode == "clean":
@@ -3136,8 +3121,6 @@ poss_garnishes = [
 
     ]
 
-#SPAM10
-
 real_cocktails = {
 
 #The 10 Most Bizarre Cocktail Names
@@ -3564,7 +3547,7 @@ real_cocktails = {
                                  "ice":             "yes"
                 },
 
-    "Nip Slip":      {"name":       "Nip Slip", #SPAM
+    "Nip Slip":      {"name":       "Nip Slip",
                                 #Where to find it: Butter & Scotch, New York, NY
                                 "ingredients":  [   "Cava",
                                                     "Barrow's Intense Ginger Liqueur",
@@ -3672,7 +3655,7 @@ real_cocktails = {
                                  "ice":             "no"
                 },
 
-    "Porn Star":      {"name":       "Porn Star", #SPAM99
+    "Porn Star":      {"name":       "Porn Star",
                                 "ingredients":  [   "Passion Fruit",
                                                     "Ketel One Vodka",
                                                     'Passoa "The Passion Drink" liqueur',
@@ -3770,7 +3753,7 @@ real_cocktails = {
                                  "ice":             "no"
                 },
 
-    "Panty Ripper":      {"name":       "Panty Ripper", #SPAM99
+    "Panty Ripper":      {"name":       "Panty Ripper",
                                 "ingredients":  [   "Coconut Rum",
                                                     "Pineapple Juice",
                                                     "a Maraschino Cherry"],
