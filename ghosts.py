@@ -387,7 +387,7 @@ def make_ghost(place=None, current_year=None):
                           "Locals think that",
                           "One theory is that",
                           "It is possible that",
-                          "Believers says that",
+                          "Believers say that",
                           "Believers claim that",
                           "Believers think that",
                           "A story is told that",
