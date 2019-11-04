@@ -206,7 +206,7 @@ def do_subs(text):
         "Duchess of Scarwell",
         "King Aethel",
         "Jeannette Parrigue",
-	"Gavin Caillot",
+        "Gavin Caillot",
         "Jacob Marches",
         "Godiva Viville",
         "Asher Brinon",
@@ -306,6 +306,12 @@ def do_subs(text):
         "Ethelwulf",
         ]
 
+    misc_subs = [
+        ["Warning: ", ""], # too jarring when it appears in our output text. Trim it out...
+        ]
+
+
+
     for person in known_people:
         if string.find(text, person) >-1:
             text = string.replace(text, person, "[PERSON]")
@@ -325,6 +331,10 @@ def do_subs(text):
     for river in known_rivers:
         if string.find(text, river) >-1:
             text = string.replace(text, river, "[RIVER]")
+
+    for sub in misc_subs:
+        if string.find(text, sub[0]) >-1:
+            text = string.replace(text, sub[0], sub[1])
 
     #strip out headings... they aren't required in our Guide
     #skiplines = [u"Lodging", u"Dining", u"Excursions", u"Transportation", u"Residency", u"Commerce"]
